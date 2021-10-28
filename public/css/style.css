@@ -1,0 +1,74 @@
+/* css untuk halaman crud/adminz.blade.php */
+.title-admin{
+  margin-left: 70px;
+  margin-bottom: 40px;
+}
+.form-lol{
+  margin-left: 150px;
+}
+.form-lol .judul-tes, .nomor-soal{
+  width: 250px;
+}
+.form-lol #btn-simpan{
+  width: 130px;
+}
+.btnn-lol{
+  margin-left: 150px;
+  width: 130px;
+  margin-bottom: 90px;
+}
+
+
+/* css buat halaman layouts/admin.blade.php */
+.line123{
+  width: 1050px;
+  color: black;
+}
+#nava-brands{
+  text-align: left;
+}
+
+
+/* css untuk halaman crud/preview.blade.php */
+.isset123{
+  text-align: center;
+  margin-top: 140px;
+}
+
+/* css untuk halaman akademik.blade.php */
+.card{
+  margin-left: 40px;
+  box-shadow: 3px 3px rgba(0,0,0,0.5);
+}
+.card-title{
+  text-align: left;
+}
+.container1{
+  margin-top: 120px;
+}
+
+/* css untuk halaman crud/preview.blade.php */
+.action123{
+  display: flex;
+  position: relative;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+}
+
+/* css untuk halaman siswa/skor_siswa.blade.php */
+.card .card-title{
+  text-align: center;
+}
+.card ul{
+  list-style-type: none;
+}
+.card{
+  margin-bottom: 40px;
+}
+.container .row{
+  margin: 0 auto;
+  position: relative;
+  justify-content: center;
+}
+

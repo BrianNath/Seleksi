@@ -44,8 +44,8 @@
         <!-- Nav Item - Dashboard -->
         <li class="nav-item {{ Nav::isRoute('home') }}">
             <a class="nav-link" href="{{ route('home') }}">
-                <i class="fas fa-fw fa-tachometer-alt"></i>
-                <span>{{ __('Dashboard') }}</span></a>
+                <i class="fas fa-fw fa-home"></i>
+                <span>{{ __('Home') }}</span></a>
         </li>
 
         <li style="margin-top:-10px;" class="nav-item">
