@@ -37,7 +37,8 @@
                     <thead>
                         <tr>
                             <th style=" text-align:center;">Nomor Soal</th>
-                            <th style="text-align:center;">Judul Tes</th>
+                            <th style="text-align:center;">Kategori</th>
+                            <th style="text-align:center;">Gambar</th>
                             <th style=" text-align:center;">Soal</th>
                             <th style=" text-align:center;">Opsi 1</th>
                             <th style=" text-align:center;">Opsi 2</th>
@@ -48,20 +49,23 @@
                     </thead>
 
                     <tbody>
+                            @php
+                                $i = 1;   
+                            @endphp
                         @foreach($data as $datas)
                         <tr>
-                            <td style=" text-align:center;">{{$datas-> id}}</td>
-                            <td>{{ $datas-> judul_tes }}</td>
+                            <td style=" text-align:center">{{ $i++ }}</td>
+                            <td>{{ $datas-> kategori }}</td>
+                            <td><img src="img/{{ $datas-> image }}" class="img-thumbnail rounded w-25 h-25"> {{ $datas-> image }}</td>
                             <td>{{$datas-> soal}}</td>
                             <td style=" text-align:center;">{{$datas-> opsi1}}</td>
                             <td style=" text-align:center;">{{$datas-> opsi2}}</td>
                             <td style=" text-align:center;">{{$datas-> opsi3}}</td>
                             <td style=" text-align:center;">{{$datas-> opsi4}}</td>
                             <td class="action123">
-                              <a style="margin-right:5px;" href="{{ route('soal.delete',$datas->id) }}" class="btn btn-danger" onclick="return confirm('Yakin Ingin Menghapus Data Ini?')">Hapus</a>
+                              <a style="margin-right:5px" href="{{ route('soal.delete',$datas->id) }}" class="btn btn-danger" onclick="return confirm('Yakin Ingin Menghapus Data Ini?')">Hapus</a>
                               <a href="{{ route('edit', $datas -> id) }}" class="btn btn-warning">Edit</a>
                             </td>
-
                         </tr>
                         @endforeach
                     </tbody>

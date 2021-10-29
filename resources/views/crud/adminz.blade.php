@@ -15,14 +15,14 @@
         <div class="warp">
             <form class="form-main" action="{{ Route('admin_kirim') }}" method="post" enctype="multipart/form-data">
                 @csrf
-                <div class="form-group">
-                  <label for="judul">Judul Tes</label><br>
-                  <input class="judul-tes" type="text" name="judul" value="">
-                </div>
-                <div class="form-group">
-                    <label for="no_soal">Nomor Soal</label><br>
-                    <input class="nomor-soal" type="text" name="id" value="">
-                </div>
+                
+                <label for="kategori">Kategori</label>
+                <select class="form-select mt-3 mb-3 ml-3" aria-label="Default select example" name="kategori" id="kategori">
+                        <option value="matematika">Matematika</option>
+                        <option value="indonesia">B.Indonesia</option>
+                        <option value="inggris">B.Inggris</option>
+                </select>
+
                 <div class="form-group">
                     <label for="soal">Soal</label><br>
                     <label for="images">Tambahkan Gambar : </label>

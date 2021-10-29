@@ -4,6 +4,8 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
+use Carbon\Carbon;
+
 class CreateSoalsTable extends Migration
 {
     /**
@@ -15,7 +17,8 @@ class CreateSoalsTable extends Migration
     {
         Schema::create('soals', function (Blueprint $table) {
             $table->id();
-            $table->string('judul_tes');
+            $table->string('kategori');
+            $table->string('image')->nullable();
             $table->text('soal');
             $table->text('opsi1');
             $table->text('opsi2');
@@ -23,7 +26,9 @@ class CreateSoalsTable extends Migration
             $table->text('opsi4');
             $table->timestamps();
         });
+      
     }
+
 
     /**
      * Reverse the migrations.

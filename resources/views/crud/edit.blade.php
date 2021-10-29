@@ -16,21 +16,25 @@
       <div class="container">
         <div class="background" style="margin-left:250px;">
             <div class="warp">
-                <form class="form-main" action="{{ url('edit/edit', $soal->id) }}" method="post">
+                <form class="form-main" action="{{ url('edit/edit', $soal->id) }}" method="post" enctype="multipart/form-data">
                     @method('patch')
                     @csrf
                     <input type="hidden" name="id" value="{{ $soal -> id }}">
-                    <div class="form-group">
-                      <label for="judul">Judul Tes</label><br>
-                      <input class="judul-tes" type="text" name="judul" value="{{ $soal -> judul_tes }}">
-                    </div>
+                    
+                    <select class="mb-3 mt-3" aria-label="{{ $soal-> kategori }}" name="kategori" id="kategori">
+                            <option value="matematika">Matematika</option>
+                            <option value="indonesia">B.Indonesia</option>
+                            <option value="inggris">B.Inggris</option>
+                    
+                        </select>
                     <div class="form-group">
                       <label for="no_soal">Nomor Soal</label><br>
                       <input type="text" name="id" value="{{ $soal -> id }}">
                     </div>
                     <div class="form-group">
                         <label for="soal">Soal</label><br>
-                        <label for="upload">Tambahkan Foto : </label> <input type="file" name="upload" value=""><br>
+                        <img src="\img/{{ $soal-> image }}" class="img-thumbnail rounded w-25 h-25 mb-3"> <p>{{ $soal-> image }}</p> 
+                        <label for="upload" class="mb-3 mt-3">Ganti Foto : </label> <input type="file" name="image" ><br>
                         <textarea name="soal" rows="8" cols="80" class="input-holder">{{ $soal -> soal }}</textarea><br>
                     </div>
                     <div class="form-group">

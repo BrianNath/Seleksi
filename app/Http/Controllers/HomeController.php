@@ -42,14 +42,26 @@ class HomeController extends Controller
     }
     public function store(Request $request)
     {
+      
+      $request->validate([
+        'image' => 'nullable|sometimes|image|mimes:jpeg,jpg,png,gif|max:2048',
+        'soal','kategori','opsi1','opsi2','opsi3','opsi4' => 'required'
+        ]);
+
+        $image = $request->file('image');       
+        $img_name = $image -> getClientOriginalName() . '-' . time() . '.' . $image -> extension();
+        $image->move(public_path('img'), $img_name);
+
+
       $masuk = DB::table('soals')->insert([
-        'judul_tes' => $request->input('judul'),
+        'kategori' => $request->input('kategori'),
         'id' => $request->input('id'),
         'soal' => $request->input('soal'),
         'opsi1' => $request->input('opsi1'),
         'opsi2' => $request->input('opsi2'),
         'opsi3' => $request->input('opsi3'),
-        'opsi4' => $request->input('opsi4')
+        'opsi4' => $request->input('opsi4'),
+        'image'=> $img_name
       ]);
       return redirect('/preview')->with('success', 'Soal Berhasil Ditambahkan');
     }
@@ -61,7 +73,7 @@ class HomeController extends Controller
     }
     public function create()
     {
-      return view('crud.admin');
+      return route('foo');
     }
 
     public function destroy()
@@ -82,10 +94,19 @@ class HomeController extends Controller
     }
     public function edits(Request $request, $id)
     {
+      
+      $ubah = soal::findOrFail($id);
+      $awal = $ubah->image;
+      $dt = ['image'=>$awal];
+
+      $request->image-> move(public_path().'/img', $awal);
+      $ubah->update($dt);
+
+
       DB::table('soals')->where('id', $id)
       ->update([
-        'judul_tes' => $request->input('judul'),
-        'id' => $request->input('id'),
+        'kategori' => $request->input('kategori'),
+        'id' => $request->input('id'),  
         'soal' => $request->input('soal'),
         'opsi1' => $request->input('opsi1'),
         'opsi2' => $request->input('opsi2'),
