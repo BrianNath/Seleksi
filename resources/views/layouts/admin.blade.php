@@ -31,7 +31,7 @@
     <ul id="nav1234" class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/home">
             <div class="sidebar-brand-icon rotate-n-15">
                 <img src="{{ asset('img/BN.png') }}" style="height:30px;">
             </div>

@@ -28,6 +28,14 @@
         <a href="{{ Route('akademik') }}" class="btn btn-primary">Kembali</a>
         <a href="{{ Route('hapus_semua') }}" class="btn btn-danger" onclick="return confirm('Yakin Ingin Menghapus Semua Soal?')">Hapus Semua Soal</a>
         <a href="{{ Route('foo') }}" class="btn btn-primary">Tambah Soal</a>
+        <form method="GET" action="{{ url('preview') }}">
+            <br>
+            <div class="input-group">
+                <input name='keyword' id="placeholder_search" type="text" class=" form-control bg-light border-1 small" placeholder="Cari soal" aria-label="Search" aria-describedby="basic-addon2" value="{{ $keyword }}">
+            <div class="input-group-append">
+            <button class="btn btn-primary" type="submit">
+            <i class="fas fa-search fa-sm"></i>
+        </form>
       </div>
     </div>
     <div class="row">
@@ -56,7 +64,11 @@
                         <tr>
                             <td style=" text-align:center">{{ $i++ }}</td>
                             <td>{{ $datas-> kategori }}</td>
-                            <td><img src="img/{{ $datas-> image }}" class="img-thumbnail rounded w-25 h-25"> {{ $datas-> image }}</td>
+                            @if ($datas->image!==null)
+                                <td><img src="img/foto_soal/{{ $datas-> image }}" class="img-thumbnail rounded w-25 h-25"> {{ $datas-> image }}</td>                           
+                            @else
+                            <td> Tidak ada gambar</td>
+                            @endif
                             <td>{{$datas-> soal}}</td>
                             <td style=" text-align:center;">{{$datas-> opsi1}}</td>
                             <td style=" text-align:center;">{{$datas-> opsi2}}</td>
@@ -76,5 +88,5 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
   </body>
 </html>
-
+{{ $data->links() }}
 @endsection

@@ -33,7 +33,7 @@ Route::get('/about', function () {
 Route::get('/admins', 'HomeController@crud')->name('cruds');
 
 Route::post('/admin', 'HomeController@store')->name('admin_kirim');
-Route::get('/preview', 'HomeController@preview')->name('preview_soal');
+Route::get('/preview', 'HomeController@preview')->name('preview');
 
 Route::get('/admin', 'HomeController@create')->name('admin');
 

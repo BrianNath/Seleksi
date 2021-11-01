@@ -16,7 +16,7 @@
         <div id="card1" class="card" style="width: 18rem;">
           <div class="card-body">
             <h5 class="card-title" style="text-align:left;">Tambah Soal</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p class="card-text">Tambahkan soal yang akan ditampilkan kepada siswa</p>
             <a href="{{ Route('foo') }}" class="btn btn-primary">
               <i class="fa fa-plus" aria-hidden="true"></i>  Tambah Soal
             </a>
@@ -26,8 +26,8 @@
         <div id="card2" class="card" style="width: 18rem;">
           <div class="card-body">
             <h5 class="card-title" style="text-align:left;">Daftar Soal</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="{{ Route('preview_soal') }}" class="btn btn-primary">Go somewhere</a>
+            <p class="card-text">Lihat, Edit, dan Hapus soal siswa</p>
+            <a href="{{ Route('preview') }}" class="btn btn-primary"><i class="fa fa-eye"></i> Lihat Soal</a>
           </div>
         </div>
 

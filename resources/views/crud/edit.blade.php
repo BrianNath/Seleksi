@@ -21,19 +21,15 @@
                     @csrf
                     <input type="hidden" name="id" value="{{ $soal -> id }}">
                     
-                    <select class="mb-3 mt-3" aria-label="{{ $soal-> kategori }}" name="kategori" id="kategori">
+                    <label for="kategori">Kategori</label>
+                    <select class="mb-3 mt-3" aria-label="{{ $soal-> kategori }}" name="kategori" id="kategori" required>                    
                             <option value="matematika">Matematika</option>
                             <option value="indonesia">B.Indonesia</option>
                             <option value="inggris">B.Inggris</option>
-                    
-                        </select>
-                    <div class="form-group">
-                      <label for="no_soal">Nomor Soal</label><br>
-                      <input type="text" name="id" value="{{ $soal -> id }}">
-                    </div>
+                    </select>
                     <div class="form-group">
                         <label for="soal">Soal</label><br>
-                        <img src="\img/{{ $soal-> image }}" class="img-thumbnail rounded w-25 h-25 mb-3"> <p>{{ $soal-> image }}</p> 
+                        <img src="\img/foto_soal/{{ $soal-> image }}" class="img-thumbnail rounded w-25 h-25 mb-3"> <p>{{ $soal-> image }}</p> 
                         <label for="upload" class="mb-3 mt-3">Ganti Foto : </label> <input type="file" name="image" ><br>
                         <textarea name="soal" rows="8" cols="80" class="input-holder">{{ $soal -> soal }}</textarea><br>
                     </div>

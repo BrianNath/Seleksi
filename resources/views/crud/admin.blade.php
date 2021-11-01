@@ -53,7 +53,7 @@
                 </form>
             </div>
         </div>
-        <a href="{{ Route('preview_soal') }}" class="btn btn-primary" style="margin-left:250px; margin-top:10px; ">Daftar Soal</a>
+        <a href="{{ Route('preview') }}" class="btn btn-primary" style="margin-left:250px; margin-top:10px; ">Daftar Soal</a>
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
