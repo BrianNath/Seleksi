@@ -18,8 +18,7 @@
                 
                 <label for="kategori">Kategori</label>
                 <select class="form-select mt-3 mb-3 ml-3" aria-label="Default select example" name="kategori" id="kategori" required>
-                        <option value="none" selected disabled hidden >Pilih Kategori</option>
-                        <option value="matematika">Matematika</option>
+                        <option value="matematika" selected>Matematika</option>
                         <option value="indonesia">B.Indonesia</option>
                         <option value="inggris">B.Inggris</option>
                 </select>
