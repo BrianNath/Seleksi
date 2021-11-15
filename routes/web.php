@@ -60,8 +60,6 @@ Route::get('skor', function(){
 Route::view('/siswaview', 'siswa.siswa_page');
 // End Siswa View
 
-Route::get('forms', 'SiswaController@view')->name('view.siswa');
-Route::post('formssiswa', 'SiswaController@siswaKirim')->name('insert.siswa');
 
 // Route::post('/files', function(Request $request){
 //   $request->image->store('images');
