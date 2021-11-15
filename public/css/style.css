@@ -72,3 +72,76 @@
   justify-content: center;
 }
 
+/* css untuk seleksi.balde.php */
+.container1{
+  margin-top: -10px;
+}
+.container1 .row .s{
+  box-shadow: 3px 4px #8d8d8d;
+  margin-right: 50px;
+  margin-bottom: 20px;
+  background-color: #4e73df;
+  color: white;
+}
+.container1 .row .s .foto-atas{
+  margin-left: 39px;
+  margin-top: 15px;
+}
+.container1 .row .s .card-body, a{
+  text-align: center;
+  color: white;
+}
+.container1 .row{
+  margin-left: 20px;
+}
+
+.container1 .row .x{
+  box-shadow: 3px 4px #8d8d8d;
+  background-color: #4e73df;
+  color: white;
+  width: 200px;
+  height: 350px;
+  text-align: center;
+  margin-right: 30px;
+}
+.container1 .row .x .card-body{
+  text-align: ini;
+}
+.container1 .row .x .foto-atas{
+  margin-left: 48px;
+  margin-top: 15px;
+}
+.container1 .juduls{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* css untuk form_indonesia.blade.php */
+.zx .form-siswa .kard-soal{
+  width: 600px;
+  margin-top: 30px;
+}
+.zx .lines{
+  border: 0.75px solid black;
+  width: 900px;
+  margin-left: 95px;
+}
+.title-ujian{
+  text-align: center;
+  margin-top: 15px;
+}
+
+/* css untuk form_inggris.blade.php */
+.xz .form-siswa .kkard-soal{
+  width: 600px;
+  margin-top: 30px;
+}
+.xz .lines{
+  border: 0.75px solid black;
+  width: 900px;
+  margin-left: 95px;
+}
+.title-ujian{
+  text-align: center;
+  margin-top: 15px;
+}

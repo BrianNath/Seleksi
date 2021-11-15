@@ -67,3 +67,15 @@ Route::post('formssiswa', 'SiswaController@siswaKirim')->name('insert.siswa');
 //   $request->image->store('images');
 //   return "berhasil";
 // });
+
+
+// Route Siswa
+Route::get('/siswa', 'SiswaController@form')->name('dashboard-siswa');
+Route::get('/homes', 'SiswaController@index')->name('siswa_home');
+
+Route::view('/seleksi', 'siswa.seleksi')->name('seleksi');
+Route::view('/pengumuman', 'pengumuman')->name('pengumuman');
+
+Route::get('/formz', 'SiswaController@indonesia')->name('compact_data');
+Route::get('formzz', 'SiswaController@inggris')->name('bahasa_inggris');
+Route::get('formzzz', 'SiswaController@matematika')->name('matematika');
